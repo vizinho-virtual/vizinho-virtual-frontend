@@ -6,7 +6,11 @@ import MailLogo from "../assets/images/mail.svg";
 import PhoneLogo from "../assets/images/phone.svg";
 import WhatsLogo from "../assets/images/whatsapp.svg";
 import "./login.css";
+
+
 export default function Login() {
+
+
   return (
     <>
     <div className="login-wrapper">
