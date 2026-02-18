@@ -12,6 +12,9 @@
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-native-svg": "^15.15.3",
+    "tamagui": "^2.0.0-rc.14",
+    "tamagui-loader": "^2.0.0-rc.14",
     "zod": "^4.3.6"
   },
   "devDependencies": {
