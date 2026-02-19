@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh; 
-  width: 100%;
+  width: 100vw;
 }
 
 main {
@@ -28,9 +28,8 @@ main {
 }
 
 .left-side {
- 
   border-right: 1px solid rgb(145, 145, 145);
-  min-height: 80vh; 
+  min-height: 81vh; 
 }
 
 form{
@@ -46,7 +45,7 @@ form{
 
 .right-side h2{
   font-size: 35px;
-  padding: 50px;
+ margin-bottom: 50px;
 
 }
 
