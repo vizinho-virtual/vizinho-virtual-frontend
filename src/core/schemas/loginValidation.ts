@@ -3,6 +3,7 @@ import { z } from "zod";
 export const loginSchema = z.object({
   email: z
     .string()
+    .min(1, "O e-mail é obrigatório")
     .email("E-mail inválido"),
 
   senha: z
@@ -11,5 +12,3 @@ export const loginSchema = z.object({
     .regex(/[0-9]/, "A senha deve conter pelo menos um número")
     .regex(/[!@#$%^&*(),.?":{}|<>]/, "A senha deve conter pelo menos um caractere especial"),
 });
-
-export type LoginData = z.infer<typeof loginSchema>;

@@ -1,46 +1,64 @@
-import React from "react";
-import LogoBase from "../assets/images/LogoBase.svg";
-import FbLogo from "../assets/images/facebook.svg";
-import InstaLogo from "../assets/images/instagram.svg";
-import MailLogo from "../assets/images/mail.svg";
-import PhoneLogo from "../assets/images/phone.svg";
-import WhatsLogo from "../assets/images/whatsapp.svg";
-import "./login.css";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import LogoBase from "../assets/images/LogoBase.svg"
+import MailLogo from "../assets/images/mail.svg"
+import InstaLogo from "../assets/images/instagram.svg"
+import PhoneLogo from "../assets/images/phone.svg"
+import WhatsLogo from "../assets/images/whatsapp.svg"
+import FbLogo from "../assets/images/facebook.svg"
+import { useNavigate, Link } from "react-router-dom";
+import { loginSchema } from "../core/schemas/loginValidation";
+import "./login.css"
 
+export default function LoginPage() {
+  const navigate = useNavigate();
 
-export default function Login() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(loginSchema),
+  });
 
+  const onSubmit = (data) => {
+    console.log("Dados enviados:", data);
+    navigate("/dashboard");
+  };
 
   return (
-    <>
-    <div className="login-wrapper">
+    <div className="page-container">
+    <main>
       <div className="left-side">
-          <img src={LogoBase} alt="" /> <h2>Vizinho Virtual</h2>
+        <img src={LogoBase} alt="" />
+        <h1>Vizinho virtual</h1>
       </div>
-      <div className="right-side">
-        <div className="login-box">
-          <h1>Login</h1>
-          <div className="input-group">
-            <label>Email</label>
-            <input type="email" placeholder="Digite seu email" />
-          </div>
-          <div className="input-group">
-            
-            <label>Senha</label>
-            <input type="password" placeholder="Digite sua senha" />
-          </div>
-          <button className="btn-login">Entrar</button>
-          <p className="forgot">Esqueceu sua senha?</p>
-          <p className="forgot">
-            Não tem uma conta? <span>Criar conta</span>
-          </p>
-        </div>
+
+<div className="right-side">
+        <h2>Login</h2>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <label htmlFor="e-mail">E-mail</label>
+          <input {...register("email")} placeholder="Digite o seu e-mail" />
+          {errors.email && <p style={{ color: 'red' }}>{errors.email.message}</p>}
+        
+        <label htmlFor="senha">Senha</label>
+          <input {...register("senha")} type="password" placeholder="Digite a sua senha" />
+          {errors.senha && <p style={{ color: 'red' }}>{errors.senha.message}</p>}
+
+          <Link to="/recuperar-senha">Esqueceu a senha?</Link>
+        <button type="submit">Entrar</button>
+
+       
+       <span>Não possui cadastro?  <Link to="/cadastro">Cadastre-se</Link>  </span>
+           
+      </form>
       </div>
-    </div>
-      <footer>
+    </main>
+  <footer>
           <div className="logo-footer">
             
-            <img src={LogoBase} alt="" /> <h2>Vizinho Virtual</h2>
+            <img src={LogoBase} alt="" />
+             <h2>Vizinho Virtual</h2>
           </div>
           <div className="footer-links">
             
@@ -71,6 +89,8 @@ export default function Login() {
 
         </div>
       </footer>
-    </>
+         
+   </div>
+    
   );
 }
