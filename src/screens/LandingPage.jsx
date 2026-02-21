@@ -9,7 +9,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <Link to="/landing-page" className="flex items-center gap-2 shrink-0">
+            <Link to="/dashboard" className="flex items-center gap-2 shrink-0">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-forest">
                 <span className="material-symbols-outlined font-bold">handyman</span>
               </div>
@@ -48,7 +48,7 @@ export default function Home() {
       </header>
 
       <main>
-        {/* HERO SECTION */}
+    
         <section className="relative overflow-hidden pt-12 pb-20 lg:pt-24 lg:pb-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1 text-center lg:text-left z-10">
