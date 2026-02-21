@@ -15,7 +15,6 @@ const verifySchema = z.object({
 export default function Verify() {
   const navigate = useNavigate();
 
-  // 2. Configuração do formulário
   const {
     register,
     handleSubmit,
@@ -24,17 +23,16 @@ export default function Verify() {
     resolver: zodResolver(verifySchema),
   });
 
-  // 3. Função de envio
   const onSubmitForm = (data) => {
     console.log("Código verificado com sucesso!", data);
-    // Após a verificação ter sucesso, enviamos o utilizador para a página principal
-    navigate('/login'); 
+  
+    navigate('/'); 
   };
 
   return (
     <div className="bg-background-light dark:bg-background-dark min-h-screen text-slate-900 dark:text-slate-100 font-display flex flex-col">
       
-      {/* Top Navigation Bar */}
+  
       <header className="w-full bg-white dark:bg-slate-900 border-b border-primary/10 px-4 md:px-20 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 text-primary font-bold text-2xl tracking-tight">
@@ -51,10 +49,10 @@ export default function Verify() {
       </header>
 
       <main className="max-w-[1000px] mx-auto px-4 py-12 flex-grow w-full">
-        {/* Progress Stepper Container - Atualizado para o Passo Final */}
+      
         <div className="mb-12">
           <div className="flex items-center justify-between mb-4">
-            {/* Passo 1 - Concluído */}
+        
             <div className="flex flex-col items-center flex-1">
               <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white mb-2 shadow-lg shadow-primary/20">
                 <span className="material-symbols-outlined">check</span>
@@ -63,8 +61,7 @@ export default function Verify() {
             </div>
             
             <div className="h-1 flex-1 bg-primary mx-4 rounded-full"></div>
-            
-            {/* Passo 2 - Concluído */}
+           
             <div className="flex flex-col items-center flex-1">
               <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white mb-2 shadow-lg shadow-primary/20">
                 <span className="material-symbols-outlined">check</span>
@@ -75,8 +72,7 @@ export default function Verify() {
             <div className="h-1 flex-1 bg-primary/20 mx-4 rounded-full overflow-hidden">
               <div className="h-full bg-primary w-1/2"></div>
             </div>
-            
-            {/* Passo 3 - Ativo */}
+      
             <div className="flex flex-col items-center flex-1">
               <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white mb-2 shadow-lg shadow-primary/20 ring-4 ring-primary/20">
                 <span className="material-symbols-outlined">verified</span>
@@ -87,8 +83,7 @@ export default function Verify() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
-          {/* Verification Form Section */}
+      
           <div className="lg:col-span-7 bg-white dark:bg-slate-900 p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
             
             <div className="mb-8 text-center sm:text-left">
@@ -139,7 +134,6 @@ export default function Verify() {
             </div>
           </div>
 
-          {/* Security Sidebar */}
           <div className="lg:col-span-5 space-y-6">
             
             <div className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-8 rounded-xl">
@@ -171,7 +165,6 @@ export default function Verify() {
         </div>
       </main>
 
-      {/* Footer Trust Badges */}
       <footer className="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-12 px-4">
         <div className="max-w-4xl mx-auto flex flex-wrap justify-center items-center gap-12 grayscale opacity-60">
           <div className="flex items-center gap-2">
