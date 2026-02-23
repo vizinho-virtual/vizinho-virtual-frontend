@@ -9,8 +9,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/dashboard" element={<LandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/verify" element={<Verify />} />
         <Route path="/recuperar-senha" element={<RecuperarSenha />} />

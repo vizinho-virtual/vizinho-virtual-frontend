@@ -17,7 +17,7 @@ const registerSchema = z.object({
     .min(10, "O telefone deve ter pelo menos 10 dígitos (com DDD)"),
 });
 
-export default function Register() {
+export default function Cadastro() {
   const navigate = useNavigate();
 
   const {
@@ -42,7 +42,7 @@ export default function Register() {
       
       <header className="w-full bg-white dark:bg-slate-900 border-b border-primary/10 px-4 md:px-20 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 text-primary font-bold text-2xl tracking-tight">
+          <Link to="/login" className="flex items-center gap-2 text-primary font-bold text-2xl tracking-tight">
             <span className="material-symbols-outlined text-3xl">box_edit</span>
             <span>RentIt</span> 
           </Link>
@@ -50,7 +50,7 @@ export default function Register() {
             <Link to="#" className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium">How it Works</Link>
             <Link to="#" className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium">Browse Items</Link>
             <Link to="#" className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium">Help</Link>
-            <Link to="/" className="bg-primary/10 text-primary px-6 py-2 rounded-lg font-bold hover:bg-primary/20 transition-all">Log in</Link>
+            <Link to="/login" className="bg-primary/10 text-primary px-6 py-2 rounded-lg font-bold hover:bg-primary/20 transition-all">Log in</Link>
           </div>
         </div>
       </header>

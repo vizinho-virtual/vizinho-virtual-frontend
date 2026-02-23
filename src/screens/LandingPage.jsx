@@ -36,7 +36,7 @@ export default function Home() {
             </nav>
             
             <div className="flex items-center gap-3 ml-4">
-              <Link to="/" className="px-5 py-2.5 text-sm font-bold hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors text-forest dark:text-white">
+              <Link to="/login" className="px-5 py-2.5 text-sm font-bold hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors text-forest dark:text-white">
                 Sign In
               </Link>
               <Link to="/cadastro" className="px-5 py-2.5 bg-primary text-forest text-sm font-bold rounded-lg shadow-lg shadow-primary/20 hover:scale-105 transition-transform inline-block">
@@ -84,7 +84,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* POPULAR CATEGORIES */}
+      
         <section className="py-24 bg-white dark:bg-slate-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12">
@@ -126,7 +126,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FEATURED RENTALS */}
+  
         <section className="py-24 bg-background-light dark:bg-background-dark">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-end justify-between mb-12">
@@ -140,7 +140,7 @@ export default function Home() {
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Item 1 */}
+         
               <div className="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-800">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img alt="Sony Camera" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=600" />
@@ -172,7 +172,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Item 2 */}
+          
               <div className="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-800">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img alt="EBike" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&q=80&w=600" />
@@ -200,8 +200,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
-              {/* Item 3 */}
               <div className="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-800">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img alt="Pressure Washer" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1621905252507-b35492d90cb4?auto=format&fit=crop&q=80&w=600" />
@@ -230,7 +228,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Item 4 */}
               <div className="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-800">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img alt="Party Speaker" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1608085575214-a78c1b3a373b?auto=format&fit=crop&q=80&w=600" />
@@ -262,7 +259,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* TRUST SECTION */}
+
         <section className="py-24 bg-forest text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -295,7 +292,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* TESTIMONIALS */}
+    
         <section className="py-24 bg-soft-yellow">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -361,7 +358,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA EARNINGS SECTION */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="relative rounded-[3rem] bg-forest dark:bg-slate-900 px-8 py-20 overflow-hidden text-center lg:text-left">
             <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
@@ -403,7 +399,6 @@ export default function Home() {
         </section>
       </main>
 
-      {/* FOOTER */}
       <footer className="bg-slate-50 dark:bg-slate-900 pt-20 pb-10 border-t border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
