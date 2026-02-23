@@ -4,8 +4,6 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 
-
-// 1. O Schema do Zod para a Verificação
 const verifySchema = z.object({
   code: z.string()
     .length(6, "O código deve ter exatamente 6 dígitos")
